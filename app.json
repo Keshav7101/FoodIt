@@ -1,0 +1,12 @@
+{
+  "name": "FoodIt",
+  "displayName": "FoodIt",
+  "expo": {
+    "name": "FoodIt",
+    "slug": "FoodIt",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
