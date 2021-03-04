@@ -1,21 +1,37 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { View, Text, Image, ScrollView, TextInput } from 'react-native';
 
-export default function App() {
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Welcome to FoodIt</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ScrollView>
+      <Text>Login Page</Text>
+      <View>
+        <Text>Here user will login</Text>
+        <Image
+          source={{
+            uri: 'https://www.pinclipart.com/picdir/middle/86-862588_mobi-food-logo-gif-clipart.png',
+          }}
+          style={{ width: 200, height: 200 }}
+        />
+      </View>
+      <TextInput
+        style={{
+          height: 40,
+          borderColor: 'gray',
+          borderWidth: 2
+        }}
+        defaultValue="LoginId"
+      />
+      <TextInput
+        style={{
+          height: 40,
+          borderColor: 'gray',
+          borderWidth: 2
+        }}
+        defaultValue="Password"
+      />
+    </ScrollView>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
