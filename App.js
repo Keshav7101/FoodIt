@@ -4,7 +4,7 @@ import { View, Text, Image, ScrollView, TextInput } from 'react-native';
 const App = () => {
   return (
     <ScrollView>
-      <Text>Login Page</Text>
+      <Text style={{fontWeight: 'bold'}}>Login Page</Text>
       <View>
         <Text>Here user will login</Text>
         <Image
