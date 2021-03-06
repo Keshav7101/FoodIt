@@ -38,6 +38,8 @@ const App = () => {
         placeholder= "Password"
       />
     </View>
+
+    
   );
 }
 
