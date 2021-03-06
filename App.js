@@ -16,7 +16,7 @@ const App = () => {
         <Text>Here user will login</Text>
         <Image
           source={{
-            uri: 'https://www.pinclipart.com/picdir/middle/86-862588_mobi-food-logo-gif-clipart.png',
+            uri: 'https://i.pinimg.com/originals/82/be/d4/82bed479344270067e3d2171379949b3.png',
           }}
           style={{ width: 200, height: 200 }}
         />
