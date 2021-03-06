@@ -1,9 +1,16 @@
 import React from 'react';
-import { View, Text, Image, ScrollView, TextInput } from 'react-native';
+import { View, Text, Image, ScrollView, TextInput, StatusBar } from 'react-native';
 
 const App = () => {
   return (
-    <ScrollView>
+    <View>
+      <StatusBar  
+                    backgroundColor = "#ff7417"  
+                    barStyle = "dark-content"   
+                    hidden = {false}    
+                    translucent = {true}  
+                />
+                
       <Text style={{fontWeight: 'bold'}}>Login Page</Text>
       <View>
         <Text>Here user will login</Text>
@@ -16,6 +23,7 @@ const App = () => {
       </View>
       <TextInput
         style={{
+          
           height: 40,
           borderColor: 'gray',
           borderWidth: 2
@@ -30,7 +38,7 @@ const App = () => {
         }}
         defaultValue="Password"
       />
-    </ScrollView>
+    </View>
   );
 }
 
