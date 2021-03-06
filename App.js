@@ -23,12 +23,11 @@ const App = () => {
       </View>
       <TextInput
         style={{
-          
           height: 40,
           borderColor: 'gray',
           borderWidth: 2
         }}
-        defaultValue="LoginId"
+        placeholder= "Loginid"
       />
       <TextInput
         style={{
