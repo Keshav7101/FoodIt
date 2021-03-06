@@ -35,7 +35,7 @@ const App = () => {
           borderColor: 'gray',
           borderWidth: 2
         }}
-        defaultValue="Password"
+        placeholder= "Password"
       />
     </View>
   );
