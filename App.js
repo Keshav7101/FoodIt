@@ -1,45 +1,17 @@
-import React from 'react';
-import { View, Text, Image, ScrollView, TextInput, StatusBar } from 'react-native';
+import react from 'react';
+import {CreateStackNavigator} from '@react-navigation/stack';
+import {NavigationContainer} from '@react-navigation/native';
 
+import {Home, Restaurant, OrderDelivery} from './screens'
+
+const Stack = createStackNavigator();
 const App = () => {
-  return (
-    <View>
-      <StatusBar  
-                    backgroundColor = "#ff7417"  
-                    barStyle = "dark-content"   
-                    hidden = {false}    
-                    translucent = {true}  
-                />
-        <Text style={{fontWeight: 'bold' }}>Login Page</Text>
-        <Text>Here user will login</Text>
-      <View>
-        <Image
-          source={{
-            uri: 'https://i.pinimg.com/originals/82/be/d4/82bed479344270067e3d2171379949b3.png',
-          }}
-          style={{ width: 200, height: 200 }}
-        />
-      </View>
-      <TextInput
-        style={{
-          height: 40,
-          borderColor: 'gray',
-          borderWidth: 2
-        }}
-        placeholder= "Loginid"
-      />
-      <TextInput
-        style={{
-          height: 40,
-          borderColor: 'gray',
-          borderWidth: 2
-        }}
-        placeholder= "Password"
-      />
-    </View>
-
-    
-  );
+  return(
+      <NavigationContainer>
+          <Stack.Navigator screenOptions={{headerShown:flase}} initialRouteName={'Home'}>
+            <Stack.Screen name='Home' Component={Home} />
+          </Stack.Navigator>
+      </NavigationContainer>
+  )
 }
-
 export default App;
