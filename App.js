@@ -10,10 +10,9 @@ const App = () => {
                     hidden = {false}    
                     translucent = {true}  
                 />
-                
-      <Text style={{fontWeight: 'bold'}}>Login Page</Text>
-      <View>
+        <Text style={{fontWeight: 'bold' }}>Login Page</Text>
         <Text>Here user will login</Text>
+      <View>
         <Image
           source={{
             uri: 'https://i.pinimg.com/originals/82/be/d4/82bed479344270067e3d2171379949b3.png',
