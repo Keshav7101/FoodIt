@@ -31,4 +31,4 @@ import {COLORS, icons} from '../constants';
          </Tab.Navigator>
      )
  }
-// this is Tab's page.
+// this is Tab's page .
