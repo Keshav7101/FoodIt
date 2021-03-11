@@ -66,6 +66,16 @@ function MyTabs() {
         }}
       />
       <Tab.Screen
+        name="Cart"
+        component={Cart}
+        options={{
+          tabBarLabel: 'Cart',
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="cart" color={color} size={26} />
+          ),
+        }}
+      />
+      <Tab.Screen
         name="Profile"
         component={Profile}
         options={{
