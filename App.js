@@ -18,6 +18,14 @@ function Notifications() {
     </View>
   );
 }
+function Cart() {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Cart</Text>
+    </View>
+  );
+}
+
 function Profile() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
@@ -57,7 +65,6 @@ function MyTabs() {
           ),
         }}
       />
-
       <Tab.Screen
         name="Profile"
         component={Profile}
