@@ -1,19 +1,45 @@
-import React from 'react';
-import { createStackNavigator } from 'react-navigation-stack';
-import {NavigationContainer} from '@react-navigation/native';
-import tabs from './navigation/tabs'
-import {Home, Restaurant, OrderDelivery} from './screens'
+import * as React from 'react';
+import { Pressable, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-const Stack = createStackNavigator();
-const App = () => {
-  return(
-      <NavigationContainer>
-          <Stack.Navigator screenOptions={{headerShown:flase}} initialRouteName={'Home'}>
-            <Stack.Screen name='Home' Component={tabs} />
-            <Stack.Screen name='Restaurant' Component={Restaurant} />
-            <Stack.Screen name='OrderDelivery' Component={OrderDelivery} />
-          </Stack.Navigator>
-      </NavigationContainer>
-  )
+function Home() {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Home Page</Text>
+    </View>
+  );
 }
-export default App;
+
+const Tab = createMaterialBottomTabNavigator();
+
+function MyTabs() {
+  return (
+    <Tab.Navigator
+      initialRouteName="Home"
+      activeColor="#FFFFFF"
+      labelStyle={{ fontSize: 12 }}
+      style={{ backgroundColor: 'pink' }}
+    >
+      <Tab.Screen
+        name="Home"
+        component={Home}
+        options={{
+          tabBarLabel: 'Home',
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="home" color={color} size={26} />
+          ),
+        }}
+      />
+    </Tab.Navigator>
+  );
+}
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <MyTabs />
+    </NavigationContainer>
+  );
+}
