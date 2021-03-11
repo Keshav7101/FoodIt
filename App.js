@@ -11,6 +11,13 @@ function Home() {
     </View>
   );
 }
+function Notifications() {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Search Page</Text>
+    </View>
+  );
+}
 function Profile() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
@@ -18,6 +25,7 @@ function Profile() {
     </View>
   );
 }
+
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -39,6 +47,7 @@ function MyTabs() {
           ),
         }}
       />
+      
       <Tab.Screen
         name="Profile"
         component={Profile}
