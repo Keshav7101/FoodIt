@@ -47,7 +47,17 @@ function MyTabs() {
           ),
         }}
       />
-      
+      <Tab.Screen
+        name="Notifications"
+        component={Notifications}
+        options={{
+          tabBarLabel: 'Search',
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="magnify" color={color} size={26} />
+          ),
+        }}
+      />
+
       <Tab.Screen
         name="Profile"
         component={Profile}
