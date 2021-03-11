@@ -7,7 +7,6 @@ import {Home, Restaurant, OrderDelivery} from './screens'
 const Stack = createStackNavigator();
 const App = () => {
   return(
-    //StackNavigator to fix
       <NavigationContainer>
           <Stack.Navigator screenOptions={{headerShown:flase}} initialRouteName={'Home'}>
             <Stack.Screen name='Home' Component={tabs} />
