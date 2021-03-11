@@ -11,6 +11,13 @@ function Home() {
     </View>
   );
 }
+function Profile() {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Login Page</Text>
+    </View>
+  );
+}
 
 const Tab = createMaterialBottomTabNavigator();
 
