@@ -58,7 +58,26 @@ const HomeScreen = ({ navigation }) => {
         <Text style={{marginTop:5,marginLeft:10,fontSize:20}}>Suraj Dhaba</Text>
           </TouchableOpacity>
         </View>
-        
+
+          <TouchableOpacity
+            style={styles.button}
+            onPress={
+              () => navigation.navigate('Spicy')
+            }>
+              <Image
+          source={{
+            uri:
+              'https://i.redd.it/8oxnulzkqza11.jpg',
+          }}
+          style={{
+            height:120,
+            width:295,
+            marginLeft:3,
+            borderRadius:20
+          }}
+        />
+            <Text style={{marginTop:5,marginLeft:10,fontSize:20}}>Spicy Restaurant</Text>
+          </TouchableOpacity>
         </View>
       </View>
       </ScrollView>
