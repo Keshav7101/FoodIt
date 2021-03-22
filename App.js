@@ -1,8 +1,22 @@
-import * as React from 'react';
 import { Text, View } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+
+import 'react-native-gesture-handler';
+
+import * as React from 'react';
+
+import
+ MaterialCommunityIcons
+from 'react-native-vector-icons/MaterialCommunityIcons';
+
+import {
+  NavigationContainer
+} from '@react-navigation/native';
+import {
+  createStackNavigator
+} from '@react-navigation/stack';
+import {
+  createBottomTabNavigator
+} from '@react-navigation/bottom-tabs';
 
 function Home() {
   return (
@@ -34,7 +48,7 @@ function Profile() {
   );
 }
 
-const Tab = createMaterialBottomTabNavigator();
+const Tab = createBottomTabNavigator();
 
 function MyTabs() {
   return (
