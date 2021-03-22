@@ -18,6 +18,8 @@ import {
   createBottomTabNavigator
 } from '@react-navigation/bottom-tabs';
 
+import HomeScreen from './Screens/HomeScreen';
+
 const Stack = createStackNavigator();
 
 function Home() {
