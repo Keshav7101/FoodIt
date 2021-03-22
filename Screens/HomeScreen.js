@@ -22,8 +22,8 @@ const HomeScreen = ({ navigation }) => {
             borderRadius:20,
             width: 350, height: 200}}
         />
-      <View style={{ flex: 1, padding: 16 }}>
       </View>
+      <View style={{ flex: 1, padding: 16 }}>
         <View
           style={{
             flex: 1,
@@ -38,6 +38,27 @@ const HomeScreen = ({ navigation }) => {
             }}>
             Hungry! FoodIt
           </Text>
+        <View>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={
+              () => navigation.navigate('SurajDhaba')
+            }>
+              <View>
+              <Image
+          source={{uri:'https://img.traveltriangle.com/blog/wp-content/tr:w-700,h-400/uploads/2019/08/Masala-Dosa1.jpg',}}
+          style={{
+            height:120,
+            width:295,
+            marginLeft:3,
+            borderRadius:20
+          }}
+        />
+        </View>
+        <Text style={{marginTop:5,marginLeft:10,fontSize:20}}>Suraj Dhaba</Text>
+          </TouchableOpacity>
+        </View>
+        
         </View>
       </View>
       </ScrollView>
