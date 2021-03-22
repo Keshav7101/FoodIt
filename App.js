@@ -18,6 +18,8 @@ import {
   createBottomTabNavigator
 } from '@react-navigation/bottom-tabs';
 
+const Stack = createStackNavigator();
+
 function Home() {
   return (
     <Stack.Navigator
@@ -27,6 +29,10 @@ function Home() {
           headerTintColor: '#fff',
           headerTitleStyle: { fontWeight: 'bold' }
         }}>
+          <Stack.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{ title: 'FoodIt' }}/>
       </Stack.Navigator>
   );
 }
