@@ -13,7 +13,17 @@ const HomeScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <ScrollView>
+      <View>
+      <Image
+          source={{
+            uri: 'https://th.bing.com/th/id/OIP.Y9l3CWSz5B50kLes_LMr0AHaE8?pid=ImgDet&rs=1',
+          }}
+          style={{ marginTop:20, marginLeft:5,
+            borderRadius:20,
+            width: 350, height: 200}}
+        />
       <View style={{ flex: 1, padding: 16 }}>
+      </View>
         <View
           style={{
             flex: 1,
