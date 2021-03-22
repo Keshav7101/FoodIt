@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Pressable, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
@@ -34,16 +34,18 @@ function Profile() {
   );
 }
 
-
 const Tab = createMaterialBottomTabNavigator();
 
 function MyTabs() {
   return (
     <Tab.Navigator
       initialRouteName="Home"
-      activeColor="#FFFFFF"
-      labelStyle={{ fontSize: 12 }}
-      style={{ backgroundColor: 'pink' }}
+      tabBarOptions={{
+        activeTintColor: '#3944BC',
+        style: {
+          backgroundColor: '#ffffff'
+        }
+      }}
     >
       <Tab.Screen
         name="Home"
