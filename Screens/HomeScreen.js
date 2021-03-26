@@ -1,99 +1,140 @@
+
+import { Text, View } from 'react-native';
+
+import 'react-native-gesture-handler';
+
 import * as React from 'react';
+
+import
+ MaterialCommunityIcons
+from 'react-native-vector-icons/MaterialCommunityIcons';
+
 import {
-  TouchableOpacity,
-  StyleSheet,
-  View,
-  Text,
-  SafeAreaView,
-  ScrollView,
-  Image
-} from 'react-native';
+  NavigationContainer
+} from '@react-navigation/native';
+import {
+  createStackNavigator
+} from '@react-navigation/stack';
+import {
+  createBottomTabNavigator
+} from '@react-navigation/bottom-tabs';
 
-const HomeScreen = ({ navigation }) => {
+import HomeScreen from './Screens/HomeScreen';
+import SurajDhaba from './Screens/SurajDhaba';
+
+const Stack = createStackNavigator();
+
+function Home() {
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <ScrollView>
-      <View>
-      <Image
-          source={{
-            uri: 'https://th.bing.com/th/id/OIP.Y9l3CWSz5B50kLes_LMr0AHaE8?pid=ImgDet&rs=1',
-          }}
-          style={{ marginTop:20, marginLeft:5,
-            borderRadius:20,
-            width: 350, height: 200}}
-        />
-      </View>
-      <View style={{ flex: 1, padding: 16 }}>
-        <View
-          style={{
-            flex: 1,
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}>
-          <Text
-            style={{
-              fontSize: 25,
-              textAlign: 'center',
-              marginBottom: 16
-            }}>
-            Hungry! FoodIt
-          </Text>
-        <View>
-          <TouchableOpacity
-            style={styles.button}
-            onPress={
-              () => navigation.navigate('SurajDhaba')
-            }>
-              <View>
-              <Image
-          source={{uri:'https://img.traveltriangle.com/blog/wp-content/tr:w-700,h-400/uploads/2019/08/Masala-Dosa1.jpg',}}
-          style={{
-            height:120,
-            width:295,
-            marginLeft:3,
-            borderRadius:20
-          }}
-        />
-        </View>
-        <Text style={{marginTop:5,marginLeft:10,fontSize:20}}>Suraj Dhaba</Text>
-          </TouchableOpacity>
-        </View>
-
-          <TouchableOpacity
-            style={styles.button}
-            onPress={
-              () => navigation.navigate('Spicy')
-            }>
-              <Image
-          source={{
-            uri:
-              'https://i.redd.it/8oxnulzkqza11.jpg',
-          }}
-          style={{
-            height:120,
-            width:295,
-            marginLeft:3,
-            borderRadius:20
-          }}
-        />
-            <Text style={{marginTop:5,marginLeft:10,fontSize:20}}>Spicy Restaurant</Text>
-          </TouchableOpacity>
-        </View>
-      </View>
-      </ScrollView>
-    </SafeAreaView>
+    <Stack.Navigator
+        initialRouteName="Home"
+        screenOptions={{
+          headerStyle: { backgroundColor: '#3944BC' },
+          headerTintColor: '#fff',
+          headerTitleStyle: { fontWeight: 'bold' }
+        }}>
+        <Stack.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{ title: 'FoodIt' }}/>
+        <Stack.Screen
+          name="SurajDhaba"
+          component={SurajDhaba}
+          options={{ title: 'Suraj Dhaba' }} />
+      </Stack.Navigator>
   );
 }
 
-const styles = StyleSheet.create({
-  button: {
-    backgroundColor: '#DDDDDD',
-    padding: 10,
-    width: 320,
-    height:170,
-    marginTop: 16,
-    marginBottom:5,
-    borderRadius:20
-  },
-});
-export default HomeScreen;
+function Search() {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Search Page</Text>
+    </View>
+  );
+}
+
+function Cart() {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Cart</Text>
+    </View>
+  );
+}
+
+function Profile() {
+  return (
+    <Stack.Navigator
+        initialRouteName="Profile"
+        screenOptions={{
+          headerStyle: { backgroundColor: '#3944BC' },
+          headerTintColor: '#fff',
+          headerTitleStyle: { fontWeight: 'bold' }
+        }}>
+      </Stack.Navigator>
+  );
+}
+
+const Tab = createBottomTabNavigator();
+
+function MyTabs() {
+  return (
+    <Tab.Navigator
+      initialRouteName="Home"
+      tabBarOptions={{
+        activeTintColor: '#3944BC',
+        style: {
+          backgroundColor: '#ffffff'
+        }
+      }}
+    >
+      <Tab.Screen
+        name="Home"
+        component={Home}
+        options={{
+          tabBarLabel: 'Home',
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="home" color={color} size={26} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Search"
+        component={Search}
+        options={{
+          tabBarLabel: 'Search',
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="magnify" color={color} size={26} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Cart"
+        component={Cart}
+        options={{
+          tabBarLabel: 'Cart',
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="cart" color={color} size={26} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Profile"
+        component={Profile}
+        options={{
+          tabBarLabel: 'Profile',
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="account" color={color} size={26} />
+          ),
+        }}
+      />
+    </Tab.Navigator>
+  );
+}
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <MyTabs />
+    </NavigationContainer>
+  );
+}
