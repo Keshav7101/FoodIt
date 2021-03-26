@@ -1,3 +1,4 @@
+
 import { Text, View } from 'react-native';
 
 import 'react-native-gesture-handler';
@@ -19,6 +20,10 @@ import {
 } from '@react-navigation/bottom-tabs';
 
 import HomeScreen from './Screens/HomeScreen';
+import SurajDhaba from './Screens/SurajDhaba';
+import Spicy from './Screens/Spicy';
+import Loginpage from "./Screens/Loginpage";
+import Signup from "./Screens/Signup";
 
 const Stack = createStackNavigator();
 
@@ -31,20 +36,30 @@ function Home() {
           headerTintColor: '#fff',
           headerTitleStyle: { fontWeight: 'bold' }
         }}>
-          <Stack.Screen
+        <Stack.Screen
           name="Home"
           component={HomeScreen}
           options={{ title: 'FoodIt' }}/>
+        <Stack.Screen
+          name="SurajDhaba"
+          component={SurajDhaba}
+          options={{ title: 'Suraj Dhaba' }} />
+        <Stack.Screen
+          name="Spicy"
+          component={Spicy}
+          options={{ title: 'Spicy Restaurant' }} />
       </Stack.Navigator>
   );
 }
-function Notifications() {
+
+function Search() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text>Search Page</Text>
     </View>
   );
 }
+
 function Cart() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
@@ -55,9 +70,22 @@ function Cart() {
 
 function Profile() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Login Page</Text>
-    </View>
+    <Stack.Navigator
+        initialRouteName="Profile"
+        screenOptions={{
+          headerStyle: { backgroundColor: '#3944BC' },
+          headerTintColor: '#fff',
+          headerTitleStyle: { fontWeight: 'bold' }
+        }}>
+        <Stack.Screen
+          name="Login"
+          component={Loginpage}
+          options={{ title: 'Login' }}/>
+        <Stack.Screen
+          name="Signup"
+          component={Signup}
+          options={{ title: 'Signup' }}/>
+      </Stack.Navigator>
   );
 }
 
@@ -85,8 +113,8 @@ function MyTabs() {
         }}
       />
       <Tab.Screen
-        name="Notifications"
-        component={Notifications}
+        name="Search"
+        component={Search}
         options={{
           tabBarLabel: 'Search',
           tabBarIcon: ({ color }) => (
