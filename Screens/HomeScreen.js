@@ -22,6 +22,8 @@ import {
 import HomeScreen from './Screens/HomeScreen';
 import SurajDhaba from './Screens/SurajDhaba';
 import Spicy from './Screens/Spicy';
+import Loginpage from "./Screens/Loginpage";
+import Signup from "./Screens/Signup";
 
 const Stack = createStackNavigator();
 
@@ -75,6 +77,14 @@ function Profile() {
           headerTintColor: '#fff',
           headerTitleStyle: { fontWeight: 'bold' }
         }}>
+        <Stack.Screen
+          name="Login"
+          component={Loginpage}
+          options={{ title: 'Login' }}/>
+        <Stack.Screen
+          name="Signup"
+          component={Signup}
+          options={{ title: 'Signup' }}/>
       </Stack.Navigator>
   );
 }
