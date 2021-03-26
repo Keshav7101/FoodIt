@@ -21,6 +21,7 @@ import {
 
 import HomeScreen from './Screens/HomeScreen';
 import SurajDhaba from './Screens/SurajDhaba';
+import Spicy from './Screens/Spicy';
 
 const Stack = createStackNavigator();
 
@@ -41,6 +42,10 @@ function Home() {
           name="SurajDhaba"
           component={SurajDhaba}
           options={{ title: 'Suraj Dhaba' }} />
+        <Stack.Screen
+          name="Spicy"
+          component={Spicy}
+          options={{ title: 'Spicy Restaurant' }} />
       </Stack.Navigator>
   );
 }
