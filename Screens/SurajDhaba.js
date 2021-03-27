@@ -17,7 +17,7 @@ const DetailsScreen = () => {
               textAlign: 'center',
               marginBottom: 16
             }}>
-            Suraj Dhaba Food Here
+            Suraj Dhaba Food List
           </Text>
         </View>
       </View>

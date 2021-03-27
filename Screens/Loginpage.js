@@ -24,7 +24,7 @@ const App = ({navigation}) => {
           padding: 10,
           borderRadius:20
         }}
-        placeholder= "  Loginid"
+        placeholder= "Loginid"
       />
       
       <TextInput
@@ -38,7 +38,7 @@ const App = ({navigation}) => {
           padding:10,
           borderRadius:20
         }}
-        placeholder= "  Password"
+        placeholder= "Password"
       />
       <View>
       <TouchableOpacity

@@ -9,7 +9,7 @@ const App = ({navigation}) => {
           source={{
             uri: 'https://pbs.twimg.com/profile_images/530381904235610113/CVDbqftg_400x400.png',
           }}
-          style={{ marginTop:20, marginLeft:30, width: 300, height: 150}}
+          style={{ marginTop:20, marginLeft:30, width: 300, height: 150,borderRadius:20}}
         />
       </View>
       <TextInput
@@ -23,7 +23,7 @@ const App = ({navigation}) => {
           padding: 10,
           borderRadius:20
         }}
-        placeholder= "  Username/Id"
+        placeholder= "Name"
       />
       
       <TextInput
@@ -37,7 +37,7 @@ const App = ({navigation}) => {
           padding:10,
           borderRadius:20
         }}
-        placeholder= "  Email"
+        placeholder= " Email"
       />
 
       <TextInput
@@ -51,7 +51,7 @@ const App = ({navigation}) => {
           padding:10,
           borderRadius:20
         }}
-        placeholder= "  Password"
+        placeholder= "Password"
       />
       <TextInput
         style={{
@@ -64,7 +64,7 @@ const App = ({navigation}) => {
           padding:10,
           borderRadius:20
         }}
-        placeholder= "  Mobile No."
+        placeholder= "Mobile No."
       />
       <View>
       <TouchableOpacity
