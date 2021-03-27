@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "729419174559",
+    "project_id": "foodit-3fb3a",
+    "storage_bucket": "foodit-3fb3a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:729419174559:android:8413be607740a01dfcc8aa",
+        "android_client_info": {
+          "package_name": "com.foodit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "729419174559-qduqdmoh01f9fq36uv2h8a7kd1eparlg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxo1K3m2VgUf0ksjcH8beqTb5U1NiI8Wc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "729419174559-qduqdmoh01f9fq36uv2h8a7kd1eparlg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
