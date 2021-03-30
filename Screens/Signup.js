@@ -9,7 +9,7 @@ const App = ({navigation}) => {
           source={{
             uri: 'https://pbs.twimg.com/profile_images/530381904235610113/CVDbqftg_400x400.png',
           }}
-          style={{ marginTop:20, marginLeft:30, width: 300, height: 150,borderRadius:20}}
+          style={{ marginTop:20, marginLeft:30, width: 300, height: 150,borderTopRightRadius:30,borderBottomLeftRadius:30}}
         />
       </View>
       <TextInput
