@@ -4,7 +4,12 @@
   "expo": {
     "name": "FoodIt",
     "slug": "FoodIt",
-    "version": "1.0.0",
+    "version": "0.0.1",
+    "splash": {
+      "image": "./assets/images/splash.jpg",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
     "assetBundlePatterns": [
       "**/*"
     ]
