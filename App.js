@@ -1,14 +1,9 @@
-
 import { Text, View } from 'react-native';
-
 import 'react-native-gesture-handler';
-
 import * as React from 'react';
-
 import
  MaterialCommunityIcons
 from 'react-native-vector-icons/MaterialCommunityIcons';
-
 import {
   NavigationContainer
 } from '@react-navigation/native';
@@ -24,6 +19,7 @@ import SurajDhaba from './Screens/SurajDhaba';
 import Spicy from './Screens/Spicy';
 import Loginpage from "./Screens/Loginpage";
 import Signup from "./Screens/Signup";
+import Searchpage from './Screens/Searchpage';
 
 const Stack = createStackNavigator();
 
@@ -54,9 +50,18 @@ function Home() {
 
 function Search() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Search Page</Text>
-    </View>
+    <Stack.Navigator
+        initialRouteName="Search"
+        screenOptions={{
+          headerStyle: { backgroundColor: '#3944BC' },
+          headerTintColor: '#fff',
+          headerTitleStyle: { fontWeight: 'bold' }
+        }}>
+        <Stack.Screen
+          name="Search"
+          component={Searchpage}
+          options={{ title: 'Search' }}/>
+      </Stack.Navigator>
   );
 }
 
