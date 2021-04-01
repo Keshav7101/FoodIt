@@ -38,7 +38,7 @@ const HomeScreen = ({ navigation }) => {
             }}>
             Hungry? FoodIt
           </Text>
-        <View>
+        <View style={{flex:1}}>
           <TouchableOpacity
             style={styles.button}
             onPress={
