@@ -9,6 +9,7 @@ import {
   Image
 } from 'react-native';
 
+import StarRating from '../Components/StarRating';
 import Swiper from 'react-native-swiper';
 
 const HomeScreen = ({ navigation }) => {
@@ -66,45 +67,55 @@ const HomeScreen = ({ navigation }) => {
             }}>
             Hungry? FoodIt
           </Text>
-        <View style={{flex:1}}>
+        <View>
           <TouchableOpacity
             style={styles.button}
             onPress={
               () => navigation.navigate('SurajDhaba')
             }>
-              <View>
-              <Image
-          source={{uri:'https://img.traveltriangle.com/blog/wp-content/tr:w-700,h-400/uploads/2019/08/Masala-Dosa1.jpg',}}
-          style={{
-            height:120,
-            width:295,
-            marginLeft:3,
-            borderRadius:20
-          }}
-        />
+              <View style={styles.cardsWrapper}>
+        <View style={styles.card}>
+          <View style={styles.cardImgWrapper}>
+            <Image
+              source={require('../assets/images/suraj.jpg')}
+              resizeMode="cover"
+              style={styles.cardImg}
+            />
+          </View>
+          <View style={styles.cardInfo}>
+            <Text style={styles.cardTitle}>Suraj Dhaba</Text>
+            <StarRating ratings={4} reviews={99} />
+            <Text style={styles.cardDetails}>
+              Near GLA University main gate Barthiha, Mathura
+            </Text>
+          </View>
         </View>
-        <Text style={{marginTop:5,marginLeft:10,fontSize:20}}>Suraj Dhaba</Text>
+        </View>
           </TouchableOpacity>
         </View>
-
           <TouchableOpacity
             style={styles.button}
             onPress={
               () => navigation.navigate('Spicy')
             }>
-              <Image
-          source={{
-            uri:
-              'https://i.redd.it/8oxnulzkqza11.jpg',
-          }}
-          style={{
-            height:120,
-            width:295,
-            marginLeft:3,
-            borderRadius:20
-          }}
-        />
-            <Text style={{marginTop:5,marginLeft:10,fontSize:20}}>Spicy Restaurant</Text>
+              <View style={styles.cardsWrapper}>
+        <View style={styles.card}>
+          <View style={styles.cardImgWrapper}>
+            <Image
+              source={require('../assets/images/Spicy.jpg')}
+              resizeMode="cover"
+              style={styles.cardImg}
+            />
+          </View>
+          <View style={styles.cardInfo}>
+            <Text style={styles.cardTitle}>Spicy Restaurant</Text>
+            <StarRating ratings={4} reviews={99} />
+            <Text style={styles.cardDetails}>
+              Near GLA University Polytechnic gate Barthiha, Mathura
+            </Text>
+          </View>
+        </View>
+        </View>
           </TouchableOpacity>
         </View>
       </View>
@@ -116,7 +127,7 @@ const HomeScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   button: {
     backgroundColor: '#DDDDDD',
-    padding: 10,
+    padding: 0,
     width: 320,
     height:170,
     marginTop: 16,
@@ -125,7 +136,7 @@ const styles = StyleSheet.create({
   },
   sliderContainer: {
     height: 200,
-    width: '90%',
+    width: '95%',
     marginTop: 10,
     justifyContent: 'center',
     alignSelf: 'center',
@@ -145,6 +156,49 @@ const styles = StyleSheet.create({
     width: '100%',
     alignSelf: 'center',
     borderRadius: 8,
+  },
+  cardsWrapper: {
+    marginTop: 20,
+    width: '90%',
+    alignSelf: 'center',
+  },
+  card: {
+    height: 130,
+    width:280,
+    flexDirection: 'row',
+    shadowColor: '#999',
+    shadowOffset: {width: 0, height: 1},
+    shadowOpacity: 0.8,
+    shadowRadius: 2,
+    elevation: 5,
+  },
+  cardImgWrapper: {
+    flex: 1,
+  },
+  cardImg: {
+    height: '100%',
+    width: '100%',
+    alignSelf: 'center',
+    borderRadius: 8,
+    borderBottomRightRadius: 0,
+    borderTopRightRadius: 0,
+  },
+  cardInfo: {
+    flex: 2,
+    padding: 10,
+    borderColor: '#ccc',
+    borderWidth: 1,
+    borderLeftWidth: 0,
+    borderBottomRightRadius: 8,
+    borderTopRightRadius: 8,
+    backgroundColor: '#fff',
+  },
+  cardTitle: {
+    fontWeight: 'bold',
+  },
+  cardDetails: {
+    fontSize: 12,
+    color: '#444',
   },
 });
 export default HomeScreen;
