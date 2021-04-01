@@ -36,7 +36,7 @@ const HomeScreen = ({ navigation }) => {
               textAlign: 'center',
               marginBottom: 16
             }}>
-            Hungry! FoodIt
+            Hungry? FoodIt
           </Text>
         <View>
           <TouchableOpacity
