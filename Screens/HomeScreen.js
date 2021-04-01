@@ -9,10 +9,13 @@ import {
   Image
 } from 'react-native';
 
+import Swiper from 'react-native-swiper';
+
 const HomeScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <ScrollView>
+        <Swiper>
       <View>
       <Image
           source={{
@@ -23,6 +26,7 @@ const HomeScreen = ({ navigation }) => {
             width: 350, height: 200}}
         />
       </View>
+      </Swiper>
       <View style={{ flex: 1, padding: 16 }}>
         <View
           style={{
