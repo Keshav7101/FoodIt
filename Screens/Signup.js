@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text,TouchableOpacity, Image, ScrollView, TextInput, StatusBar, Header, Button, ImageBackground } from 'react-native';
+import { View, Text,TouchableOpacity, Image, ScrollView, TextInput} from 'react-native';
 
 const App = ({navigation}) => {
   return (

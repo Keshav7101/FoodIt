@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {SafeAreaView, View,TouchableOpacity, Text, Image, ScrollView, TextInput, Header, Button, ImageBackground } from 'react-native';
+import {SafeAreaView, View,TouchableOpacity, Text, Image, ScrollView, TextInput } from 'react-native';
 
 const App = ({navigation}) => {
   return (
