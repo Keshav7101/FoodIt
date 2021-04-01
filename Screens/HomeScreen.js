@@ -15,19 +15,43 @@ const HomeScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <ScrollView>
-        <Swiper>
-      <View>
-      <Image
-          source={{
-            uri: 'https://th.bing.com/th/id/OIP.Y9l3CWSz5B50kLes_LMr0AHaE8?pid=ImgDet&rs=1',
-          }}
-          style={{ marginTop:20, marginLeft:5,
-            borderRadius:20,
-            width: 350, height: 200}}
-        />
+      <View style={styles.sliderContainer}>
+        <Swiper
+          autoplay
+          horizontal={false}
+          height={200}
+          activeDotColor="#FF6347">
+          <View style={styles.slide}>
+            <Image
+              source={require('../assets/images/banner4.jpg')}
+              resizeMode="cover"
+              style={styles.sliderImage}
+            />
+          </View>
+          <View style={styles.slide}>
+            <Image
+              source={require('../assets/images/banner1.jpg')}
+              resizeMode="cover"
+              style={styles.sliderImage}
+            />
+          </View>
+          <View style={styles.slide}>
+            <Image
+              source={require('../assets/images/banner2.jpg')}
+              resizeMode="cover"
+              style={styles.sliderImage}
+            />
+          </View>
+          <View style={styles.slide}>
+            <Image
+              source={require('../assets/images/banner3.jpg')}
+              resizeMode="cover"
+              style={styles.sliderImage}
+            />
+          </View>
+        </Swiper>
       </View>
-      </Swiper>
-      <View style={{ flex: 1, padding: 16 }}>
+      <View style={{ flex:1}}>
         <View
           style={{
             flex: 1,
@@ -98,6 +122,29 @@ const styles = StyleSheet.create({
     marginTop: 16,
     marginBottom:5,
     borderRadius:20
+  },
+  sliderContainer: {
+    height: 200,
+    width: '90%',
+    marginTop: 10,
+    justifyContent: 'center',
+    alignSelf: 'center',
+    borderRadius: 8,
+  },
+
+  wrapper: {},
+
+  slide: {
+    flex: 1,
+    justifyContent: 'center',
+    backgroundColor: 'transparent',
+    borderRadius: 8,
+  },
+  sliderImage: {
+    height: '100%',
+    width: '100%',
+    alignSelf: 'center',
+    borderRadius: 8,
   },
 });
 export default HomeScreen;
