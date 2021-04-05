@@ -126,7 +126,7 @@ const HomeScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: '#DDDDDD',
+    backgroundColor: '#ffffff',
     padding: 0,
     width: 320,
     height:170,
