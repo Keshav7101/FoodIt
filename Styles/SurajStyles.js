@@ -20,6 +20,7 @@ export default StyleSheet.create({
 		backgroundColor: "#fff",
 		padding: 20,
 		paddingTop: 40,
+		paddingBottom:40
 	},
 	col: {
 		flex: 1,

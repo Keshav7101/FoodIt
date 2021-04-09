@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Text, View, ScrollView, Image, SafeAreaView} from "react-native";
+import {Text, View, ScrollView, SafeAreaView} from "react-native";
 import InputSpinner from "react-native-input-spinner";
 import Styles from "../Styles/SurajStyles";
 
@@ -35,7 +35,7 @@ export default class App extends Component {
 		return (
 			<SafeAreaView style={Styles.mainContainer}>
 				<ScrollView style={Styles.container}>
-				<View style={Styles.col}>
+					<View style={Styles.col}>
 						<Text style={Styles.text}>Egg Roll</Text>
 						<InputSpinner style={Styles.spinner} color={"#C4C4C4"}
 							colorPress={"#F00"}
@@ -79,6 +79,55 @@ export default class App extends Component {
 					</View>
 					<View style={Styles.col}>
 						<Text style={Styles.text}>Gobhi Parantha</Text>
+						<InputSpinner style={Styles.spinner} color={"#C4C4C4"}
+							colorPress={"#F00"}
+							buttonTextColor={"#000"}
+							buttonPressTextColor={"#FFF"} placeholder={"Add"} />
+					</View>
+					<View style={Styles.col}>
+						<Text style={Styles.text}>Veg Fried Rice</Text>
+						<InputSpinner style={Styles.spinner} color={"#C4C4C4"}
+							colorPress={"#F00"}
+							buttonTextColor={"#000"}
+							buttonPressTextColor={"#FFF"} placeholder={"Add"} />
+					</View>
+					<View style={Styles.col}>
+						<Text style={Styles.text}>Egg Fried Rice</Text>
+						<InputSpinner style={Styles.spinner} color={"#C4C4C4"}
+							colorPress={"#F00"}
+							buttonTextColor={"#000"}
+							buttonPressTextColor={"#FFF"} placeholder={"Add"} />
+					</View>
+					<View style={Styles.col}>
+						<Text style={Styles.text}>Chilly Potato</Text>
+						<InputSpinner style={Styles.spinner} color={"#C4C4C4"}
+							colorPress={"#F00"}
+							buttonTextColor={"#000"}
+							buttonPressTextColor={"#FFF"} placeholder={"Add"} />
+					</View>
+					<View style={Styles.col}>
+						<Text style={Styles.text}>Egg Curry</Text>
+						<InputSpinner style={Styles.spinner} color={"#C4C4C4"}
+							colorPress={"#F00"}
+							buttonTextColor={"#000"}
+							buttonPressTextColor={"#FFF"} placeholder={"Add"} />
+					</View>
+					<View style={Styles.col}>
+						<Text style={Styles.text}>Bhurji Parantha</Text>
+						<InputSpinner style={Styles.spinner} color={"#C4C4C4"}
+							colorPress={"#F00"}
+							buttonTextColor={"#000"}
+							buttonPressTextColor={"#FFF"} placeholder={"Add"} />
+					</View>
+					<View style={Styles.col}>
+						<Text style={Styles.text}>Chowmein</Text>
+						<InputSpinner style={Styles.spinner} color={"#C4C4C4"}
+							colorPress={"#F00"}
+							buttonTextColor={"#000"}
+							buttonPressTextColor={"#FFF"} placeholder={"Add"} />
+					</View>
+					<View style={Styles.col}>
+						<Text style={Styles.text}>Egg Chowmein</Text>
 						<InputSpinner style={Styles.spinner} color={"#C4C4C4"}
 							colorPress={"#F00"}
 							buttonTextColor={"#000"}
