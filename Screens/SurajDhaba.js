@@ -87,8 +87,7 @@ export default class App extends Component {
 					</View>
 					<View>
 						<Button title='Go to cart' onPress={() =>  
-        					this.props.navigation.navigate('Cart', 
-							{foodname: this.state.foodname})} 
+        					this.props.navigation.navigate('Cart',)}
 						/>
 					</View>
 				</ScrollView>

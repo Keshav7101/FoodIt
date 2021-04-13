@@ -1,22 +1,25 @@
 import * as React from 'react';
-import { View, Text, SafeAreaView,Button } from 'react-native';
+import { View, Text, SafeAreaView,Button,TouchableOpacity,StyleSheet,Image } from 'react-native';
 
-const ConfirmScreen = () => {
+const CartScreen = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View style={{ flex: 1 , padding: 16}}>
-        <View
-          style={{
-            flex: 1,
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
-          <View>
-              <Text>Your Order Is Confirmed</Text>	
-		</View>
-        </View>
+      <Image
+              source={require('../assets/images/ok.png')}
+              style={Styles.sliderImage}
+            />
       </View>
     </SafeAreaView>
   );
 }
-export default ConfirmScreen;
+const Styles = StyleSheet.create({
+    sliderImage: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        resizeMode: 'cover',
+        height:100,
+        width:100,
+    }
+})
+export default CartScreen;

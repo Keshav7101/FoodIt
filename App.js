@@ -13,6 +13,7 @@ import {
 import {
   createBottomTabNavigator
 } from '@react-navigation/bottom-tabs';
+import VectorIcons from 'react-native-vector-icons';
 
 import HomeScreen from './Screens/HomeScreen';
 import SurajDhaba from './Screens/SurajDhaba';
@@ -136,9 +137,9 @@ function MyTabs() {
         name="Search"
         component={Search}
         options={{
-          tabBarLabel: 'Search',
+          tabBarLabel: 'Find',
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="magnify" color={color} size={26} />
+            <MaterialCommunityIcons name="map-marker" color={color} size={26} />
           ),
         }}
       />
