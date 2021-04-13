@@ -21,6 +21,7 @@ import Loginpage from "./Screens/Loginpage";
 import Signup from "./Screens/Signup";
 import Searchpage from './Screens/Searchpage';
 import CartPage from './Screens/CartPage';
+import OrderConfirmation from './Screens/OrderConfirmation'
 
 const Stack = createStackNavigator();
 
@@ -79,6 +80,10 @@ function Cart() {
           name="Cartpage"
           component={CartPage}
           options={{ title: 'Cart' }}/>
+        <Stack.Screen
+          name="OrderConfirmation"
+          component={OrderConfirmation}
+          options={{ title: 'Confirmation' }}/>
       </Stack.Navigator>
   );
 }

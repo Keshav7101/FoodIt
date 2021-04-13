@@ -6,6 +6,7 @@ import Styles from "../Styles/SurajStyles";
 export default class App extends Component {
 	constructor(props) {
 		super(props);
+		this.state={foodname:'',}
 		let data = [];
 		for (var i = 0; i < 10; i++) {
 			data.push({
