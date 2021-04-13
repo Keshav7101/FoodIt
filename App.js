@@ -20,6 +20,7 @@ import Spicy from './Screens/Spicy';
 import Loginpage from "./Screens/Loginpage";
 import Signup from "./Screens/Signup";
 import Searchpage from './Screens/Searchpage';
+import CartPage from './Screens/CartPage';
 
 const Stack = createStackNavigator();
 
@@ -67,9 +68,18 @@ function Search() {
 
 function Cart() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Cart</Text>
-    </View>
+    <Stack.Navigator
+        initialRouteName="CartPage"
+        screenOptions={{
+          headerStyle: { backgroundColor: '#3944BC' },
+          headerTintColor: '#fff',
+          headerTitleStyle: { fontWeight: 'bold' }
+        }}>
+        <Stack.Screen
+          name="Cartpage"
+          component={CartPage}
+          options={{ title: 'Cart' }}/>
+      </Stack.Navigator>
   );
 }
 
