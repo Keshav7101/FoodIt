@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { View, Text, SafeAreaView,Button,TouchableOpacity,StyleSheet,Image } from 'react-native';
-
 const CartScreen = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
