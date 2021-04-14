@@ -5,10 +5,7 @@ const CartScreen = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View style={{ flex: 1 , padding: 16}}>
-      <Image
-              source={require('../assets/images/ok.png')}
-              style={Styles.sliderImage}
-            />
+      
       </View>
     </SafeAreaView>
   );
