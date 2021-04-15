@@ -11,17 +11,8 @@ export default class HomeScreen extends React.Component {
             username: '',  
         };  
     }  
-    static navigationOptions = {  
-        title: 'Home',  
-        headerStyle: {  
-            backgroundColor: '#f4511e',  
-        },  
-        //headerTintColor: '#0ff',  
-        headerTitleStyle: {  
-            fontWeight: 'bold',  
-        },  
-    };  
-  
+    };
+
     render() {  
         const { navigate } = this.props.navigation;  
         return (  
