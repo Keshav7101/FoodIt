@@ -10,8 +10,8 @@ export default class HomeScreen extends React.Component {
         this.state = {  
             username: '',  
         };  
-    }  
     };
+
     render() {  
         const { navigate } = this.props.navigation;  
         return (  
