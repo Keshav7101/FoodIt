@@ -33,9 +33,6 @@ const FirstPage = ({navigation}) => {
           }
         />
       </View>
-      <Text style={{textAlign: 'center', color: 'grey'}}>
-        www.aboutreact.com
-      </Text>
     </SafeAreaView>
   );
 };

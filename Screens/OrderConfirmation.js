@@ -5,17 +5,10 @@ const SecondPage = ({route}) => {
   return (
     <SafeAreaView style={{flex: 1}}>
       <View style={styles.container}>
-        <Text style={styles.heading}>
-          React Native Pass Value From One Screen to Another
-          Using React Navigation
-        </Text>
         <Text style={styles.textStyle}>
-          Values passed from First page: {route.params.paramKey}
+          Your Order will be delivered at {route.params.paramKey}
         </Text>
       </View>
-      <Text style={{textAlign: 'center', color: 'grey'}}>
-        www.aboutreact.com
-      </Text>
     </SafeAreaView>
   );
 };
