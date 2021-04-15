@@ -11,7 +11,7 @@ const SecondPage = ({route}) => {
             autoPlay
             resizeMode='cover'
             source={require('../assets/cart-checkout.json')}
-            style={{height:300,marginLeft:6}}
+            style={{height:300,marginLeft:7}}
         />
         <Text style={styles.placed}>Your order is placed</Text>
         <Text style={styles.textStyle}>
