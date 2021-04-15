@@ -13,6 +13,7 @@ import {
 import {
   createBottomTabNavigator
 } from '@react-navigation/bottom-tabs';
+import VectorIcons from 'react-native-vector-icons';
 
 import HomeScreen from './Screens/HomeScreen';
 import SurajDhaba from './Screens/SurajDhaba';
@@ -21,6 +22,7 @@ import Loginpage from "./Screens/Loginpage";
 import Signup from "./Screens/Signup";
 import Searchpage from './Screens/Searchpage';
 import CartPage from './Screens/CartPage';
+import OrderConfirmation from './Screens/OrderConfirmation'
 
 const Stack = createStackNavigator();
 
@@ -79,6 +81,10 @@ function Cart() {
           name="Cartpage"
           component={CartPage}
           options={{ title: 'Cart' }}/>
+        <Stack.Screen
+          name="OrderConfirmation"
+          component={OrderConfirmation}
+          options={{ title: 'Confirmation' }}/>
       </Stack.Navigator>
   );
 }
@@ -131,9 +137,9 @@ function MyTabs() {
         name="Search"
         component={Search}
         options={{
-          tabBarLabel: 'Search',
+          tabBarLabel: 'Find',
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="magnify" color={color} size={26} />
+            <MaterialCommunityIcons name="map-marker" color={color} size={26} />
           ),
         }}
       />

@@ -6,6 +6,7 @@ import Styles from "../Styles/SurajStyles";
 export default class App extends Component {
 	constructor(props) {
 		super(props);
+		this.state={foodname:'',}
 		let data = [];
 		for (var i = 0; i < 10; i++) {
 			data.push({
@@ -86,8 +87,7 @@ export default class App extends Component {
 					</View>
 					<View>
 						<Button title='Go to cart' onPress={() =>  
-        					this.props.navigation.navigate('Cart', 
-							{foodname: this.state.foodname})} 
+        					this.props.navigation.navigate('Cart',)}
 						/>
 					</View>
 				</ScrollView>
