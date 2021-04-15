@@ -31,7 +31,7 @@ const FirstPage = ({navigation}) => {
         {/* On click of the button we will send the data as a Json
           From here to the Second Screen using navigation */}
         <Button
-          title="Go Next"
+          title="Checkout"
           //Button Title
           onPress={() =>
             navigation.navigate('OrderConfirmation', {
