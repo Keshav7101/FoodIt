@@ -15,7 +15,7 @@ const SecondPage = ({route}) => {
         />
         <Text style={styles.placed}>Your order is placed</Text>
         <Text style={styles.textStyle}>
-          Your Order will be delivered at {route.params.paramKey}
+          Your Order will be delivered at<br/> {route.params.paramKey}
         </Text>
       </View>
     </SafeAreaView>
