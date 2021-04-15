@@ -14,18 +14,11 @@ const FirstPage = ({navigation}) => {
   return (
     <SafeAreaView style={{flex: 1}}>
       <View style={styles.container}>
-        <Text style={styles.heading}>
-          React Native Pass Value From One Screen to Another
-          Using React Navigation
-        </Text>
-        <Text style={styles.textStyle}>
-          Please insert your name to pass it to second screen
-        </Text>
         {/*Input to get the value from the user*/}
         <TextInput
           value={userName}
           onChangeText={(username) => setUserName(username)}
-          placeholder={'Enter Any value'}
+          placeholder={'Order Pickup Place'}
           style={styles.inputStyle}
         />
         {/* On click of the button we will send the data as a Json
