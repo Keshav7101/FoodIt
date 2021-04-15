@@ -1,6 +1,3 @@
-// React Native Pass Value From One Screen to Another Using React Navigation
-// https://aboutreact.com/react-native-pass-value-from-one-screen-to-another-using-react-navigation/
-
 import React from 'react';
 import {SafeAreaView, StyleSheet, View, Text} from 'react-native';
 
