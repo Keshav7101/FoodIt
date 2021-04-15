@@ -1,36 +1,44 @@
-import * as React from 'react';
-import { View, Text, SafeAreaView,Button,TouchableOpacity,StyleSheet,Image } from 'react-native';
-import LottieView from 'lottie-react-native';
+// React Native Pass Value From One Screen to Another Using React Navigation
+// https://aboutreact.com/react-native-pass-value-from-one-screen-to-another-using-react-navigation/
 
-const CartScreen = () => {
+import React from 'react';
+import {SafeAreaView, StyleSheet, View, Text} from 'react-native';
+
+const SecondPage = ({route}) => {
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <View style={{ flex: 1 , padding: 16}}>
-        <LottieView 
-            key='animation'
-            autoPlay
-            resizeMode='cover'
-            source={require('../assets/cart-checkout.json')}
-            style={{height:300,marginLeft:8}}
-        />
-        <Text style={styles.confirmtext}>Your Order is Placed</Text>
-        <Text style={styles.placeconfirm}>Your Order Will be delivered at</Text>
+    <SafeAreaView style={{flex: 1}}>
+      <View style={styles.container}>
+        <Text style={styles.heading}>
+          React Native Pass Value From One Screen to Another
+          Using React Navigation
+        </Text>
+        <Text style={styles.textStyle}>
+          Values passed from First page: {route.params.paramKey}
+        </Text>
       </View>
+      <Text style={{textAlign: 'center', color: 'grey'}}>
+        www.aboutreact.com
+      </Text>
     </SafeAreaView>
   );
-}
+};
+
+export default SecondPage;
+
 const styles = StyleSheet.create({
-    confirmtext:{
-        fontSize:20,
-        justifyContent:'center',
-        alignItems:'center',
-        marginLeft:70
-    },
-    placeconfirm:{
-        fontSize:20,
-        justifyContent:'center',
-        alignItems:'center',
-        marginLeft:20
-    }
-})
-export default CartScreen;
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    padding: 20,
+  },
+  heading: {
+    fontSize: 25,
+    textAlign: 'center',
+    marginVertical: 10,
+  },
+  textStyle: {
+    textAlign: 'center',
+    fontSize: 16,
+    marginVertical: 10,
+  },
+});

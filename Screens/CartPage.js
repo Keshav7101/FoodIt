@@ -34,7 +34,7 @@ const FirstPage = ({navigation}) => {
           title="Go Next"
           //Button Title
           onPress={() =>
-            navigation.navigate('SecondPage', {
+            navigation.navigate('OrderConfirmation', {
               paramKey: userName,
             })
           }
