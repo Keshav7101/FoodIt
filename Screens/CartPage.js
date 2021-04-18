@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 
 const FirstPage = ({navigation}) => {
-  const [userName, setUserName] = useState('AboutReact');
+  const [userName, setUserName] = useState('');
 
   return (
     <SafeAreaView style={{flex: 1}}>

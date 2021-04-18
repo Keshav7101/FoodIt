@@ -37,11 +37,11 @@ export default class App extends Component {
 			<SafeAreaView style={Styles.mainContainer}>
 				<ScrollView style={Styles.container}>
 					<View style={Styles.col}>
-						<Text value={this.state.foodname} onChangeText={foodname => this.setState({ foodname })} style={Styles.text}>Egg Roll</Text>
+						<Text style={Styles.text}>Egg Roll</Text>
 						<InputSpinner style={Styles.spinner} color={"#C4C4C4"}
 							colorPress={"#F00"}
 							buttonTextColor={"#000"}
-							buttonPressTextColor={"#FFF"} placeholder={"Add"} />
+							buttonPressTextColor={"#FFF"} placeholder={"Rs.40"} />
 					</View>
 					<View style={Styles.col}>
 						<Text style={Styles.text}>Veg Roll</Text>
