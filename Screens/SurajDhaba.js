@@ -1,7 +1,8 @@
 import React, {Component} from "react";
-import {Text, View, ScrollView, SafeAreaView,Button} from "react-native";
+import {Text, View, ScrollView, SafeAreaView,Button,TouchableOpacity} from "react-native";
 import InputSpinner from "react-native-input-spinner";
 import Styles from "../Styles/SurajStyles";
+import Icon from 'react-native-vector-icons/Ionicons';
 
 export default class App extends Component {
 	constructor(props) {
@@ -36,6 +37,21 @@ export default class App extends Component {
 		return (
 			<SafeAreaView style={Styles.mainContainer}>
 				<ScrollView style={Styles.container}>
+					<TouchableOpacity
+						onPress={()=>this.onClickAddCart(item)}
+						style={{
+						width:120,
+						backgroundColor:'#33c37d',
+						flexDirection:'row',
+						alignItems:'center',
+						justifyContent:"center",
+						borderRadius:5,
+						padding:4
+            		}}>
+            <Text style={{fontSize:18, color:"white", fontWeight:"bold"}}>Add Cart</Text>
+            <View style={{width:10}} />
+            <Icon name="ios-add-circle" size={30} color={"white"} />
+          		</TouchableOpacity>
 					<View style={Styles.col}>
 						<Text style={Styles.text}>Egg Roll</Text>
 						<InputSpinner style={Styles.spinner} color={"#C4C4C4"}
@@ -48,42 +64,42 @@ export default class App extends Component {
 						<InputSpinner style={Styles.spinner} color={"#C4C4C4"}
 							colorPress={"#F00"}
 							buttonTextColor={"#000"}
-							buttonPressTextColor={"#FFF"} placeholder={"Add"} />
+							buttonPressTextColor={"#FFF"} placeholder={"Rs.35"} />
 					</View>
 					<View style={Styles.col}>
 						<Text style={Styles.text}>Paneer Roll</Text>
 						<InputSpinner style={Styles.spinner} color={"#C4C4C4"}
 							colorPress={"#F00"}
 							buttonTextColor={"#000"}
-							buttonPressTextColor={"#FFF"} placeholder={"Add"} />
+							buttonPressTextColor={"#FFF"} placeholder={"Rs.40"} />
 					</View>
 					<View style={Styles.col}>
 						<Text style={Styles.text}>Chicken Roll</Text>
 						<InputSpinner style={Styles.spinner} color={"#C4C4C4"}
 							colorPress={"#F00"}
 							buttonTextColor={"#000"}
-							buttonPressTextColor={"#FFF"} placeholder={"Add"} />
+							buttonPressTextColor={"#FFF"} placeholder={"Rs.50"} />
 					</View>
 					<View style={Styles.col}>
 						<Text style={Styles.text}>Alu Parantha</Text>
 						<InputSpinner style={Styles.spinner} color={"#C4C4C4"}
 							colorPress={"#F00"}
 							buttonTextColor={"#000"}
-							buttonPressTextColor={"#FFF"} placeholder={"Add"} />
+							buttonPressTextColor={"#FFF"} placeholder={"Rs.35"} />
 					</View>
 					<View style={Styles.col}>
 						<Text style={Styles.text}>Paneer Parantha</Text>
 						<InputSpinner style={Styles.spinner} color={"#C4C4C4"}
 							colorPress={"#F00"}
 							buttonTextColor={"#000"}
-							buttonPressTextColor={"#FFF"} placeholder={"Add"} />
+							buttonPressTextColor={"#FFF"} placeholder={"Rs.35"} />
 					</View>
 					<View style={Styles.col}>
 						<Text style={Styles.text}>Gobhi Parantha</Text>
 						<InputSpinner style={Styles.spinner} color={"#C4C4C4"}
 							colorPress={"#F00"}
 							buttonTextColor={"#000"}
-							buttonPressTextColor={"#FFF"} placeholder={"Add"} />
+							buttonPressTextColor={"#FFF"} placeholder={"Rs.35"} />
 					</View>
 					<View>
 						<Button title='Go to cart' onPress={() =>  

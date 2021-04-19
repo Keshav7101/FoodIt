@@ -9,15 +9,15 @@ import {
 } from 'react-native';
 
 const FirstPage = ({navigation}) => {
-  const [userName, setUserName] = useState('');
+  const [placeName, setPlaceName] = useState('');
 
   return (
     <SafeAreaView style={{flex: 1}}>
       <View style={styles.container}>
         {/*Input to get the value from the user*/}
         <TextInput
-          value={userName}
-          onChangeText={(username) => setUserName(username)}
+          value={placeName}
+          onChangeText={(placeName) => setPlaceName(placeName)}
           placeholder={'Order Pickup Place'}
           style={styles.inputStyle}
         />
@@ -28,7 +28,7 @@ const FirstPage = ({navigation}) => {
           //Button Title
           onPress={() =>
             navigation.navigate('OrderConfirmation', {
-              paramKey: userName,
+              paramKey: placeName,
             })
           }
         />
