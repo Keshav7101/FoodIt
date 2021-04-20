@@ -61,8 +61,8 @@ const DATA = [
 	  },
   ];
 
-const FirstPage = ({navigation}) => {
-  const [foodName, setFoodName] = useState('');
+const SurajPage = ({navigation}) => {
+  const [foodName1, setFoodName1] = useState('');
   const Item = ({ title }) => (
 	<View style={styles.item}>
 	  <Text style={styles.title}>{title}</Text>
@@ -112,8 +112,8 @@ const FirstPage = ({navigation}) => {
       </View>
       <View style={styles.container}>
         <TextInput
-          value={foodName}
-          onChangeText={(foodName) => setFoodName(foodName)}
+          value={foodName1}
+          onChangeText={(foodName1) => setFoodName1(foodName1)}
           placeholder={'Food Item'}
           style={styles.inputStyle}
         />
@@ -128,7 +128,7 @@ const FirstPage = ({navigation}) => {
           title="Go to Cart"
           onPress={() =>
             navigation.navigate('Cart', {
-              paramKey: foodName,
+              paramKey: foodName1,
             })
           }
         />
@@ -137,7 +137,7 @@ const FirstPage = ({navigation}) => {
   );
 };
 
-export default FirstPage;
+export default SurajPage;
 
 const styles = StyleSheet.create({
   container: {

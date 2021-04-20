@@ -39,8 +39,6 @@ const FirstPage = ({navigation,route}) => {
   );
 };
 
-export default FirstPage;
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -65,3 +63,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#DBDBD6',
   },
 });
+
+export default FirstPage;

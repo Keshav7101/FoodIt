@@ -130,7 +130,7 @@ const FirstPage = ({navigation}) => {
           title="Go to Cart"
           //Button Title
           onPress={() =>
-            navigation.navigate('CartPage', {
+            navigation.navigate('Cart', {
               paramKey: foodName,
             })
           }
