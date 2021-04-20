@@ -77,7 +77,7 @@ const App = ({navigation}) => {
             borderRadius:20
           }}
             onPress={
-              () => navigation.navigate('')
+              () => navigation.navigate('Profile')
             }>
             <Text>SignUp</Text>
           </TouchableOpacity>

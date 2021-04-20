@@ -1,92 +1,43 @@
-import React, { useEffect, useState } from 'react'
-import { FlatList, Keyboard, Text, TextInput, TouchableOpacity, View } from 'react-native'
-import styles from '../Styles/ProfileScreenStyles';
-import { firebase } from '../Screens/firebase/config'
+import React from 'react';
+import {SafeAreaView, StyleSheet, View, Text,Image} from 'react-native';
+import LottieView from 'lottie-react-native';
 
-export default function HomeScreen(props) {
+const SecondPage = ({route}) => {
+  return (
+    <SafeAreaView style={{flex: 1}}>
+      <View style={styles.container}>
+      <LottieView
+            key='animation'
+            autoPlay
+            resizeMode='cover'
+            source={require('../assets/Watermelon.json')}
+            style={{height:350,marginLeft:0,marginTop:0}}
+        />
+        <Text style={styles.placed}>Hello</Text>
+      </View>
+    </SafeAreaView>
+  );
+};
 
-    const [entityText, setEntityText] = useState('')
-    const [entities, setEntities] = useState([])
+export default SecondPage;
 
-    const entityRef = firebase.firestore().collection('entities')
-    const userID = props.extraData.id
-
-    useEffect(() => {
-        entityRef
-            .where("authorID", "==", userID)
-            .orderBy('createdAt', 'desc')
-            .onSnapshot(
-                querySnapshot => {
-                    const newEntities = []
-                    querySnapshot.forEach(doc => {
-                        const entity = doc.data()
-                        entity.id = doc.id
-                        newEntities.push(entity)
-                    });
-                    setEntities(newEntities)
-                },
-                error => {
-                    console.log(error)
-                }
-            )
-    }, [])
-
-    const onAddButtonPress = () => {
-        if (entityText && entityText.length > 0) {
-            const timestamp = firebase.firestore.FieldValue.serverTimestamp();
-            const data = {
-                text: entityText,
-                authorID: userID,
-                createdAt: timestamp,
-            };
-            entityRef
-                .add(data)
-                .then(_doc => {
-                    setEntityText('')
-                    Keyboard.dismiss()
-                })
-                .catch((error) => {
-                    alert(error)
-                });
-        }
-    }
-
-    const renderEntity = ({item, index}) => {
-        return (
-            <View style={styles.entityContainer}>
-                <Text style={styles.entityText}>
-                    {index}. {item.text}
-                </Text>
-            </View>
-        )
-    }
-
-    return (
-        <View style={styles.container}>
-            <View style={styles.formContainer}>
-                <TextInput
-                    style={styles.input}
-                    placeholder='Add new entity'
-                    placeholderTextColor="#aaaaaa"
-                    onChangeText={(text) => setEntityText(text)}
-                    value={entityText}
-                    underlineColorAndroid="transparent"
-                    autoCapitalize="none"
-                />
-                <TouchableOpacity style={styles.button} onPress={onAddButtonPress}>
-                    <Text style={styles.buttonText}>Add</Text>
-                </TouchableOpacity>
-            </View>
-            { entities && (
-                <View style={styles.listContainer}>
-                    <FlatList
-                        data={entities}
-                        renderItem={renderEntity}
-                        keyExtractor={(item) => item.id}
-                        removeClippedSubviews={true}
-                    />
-                </View>
-            )}
-        </View>
-    )
-}
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    padding: 5,
+  },
+  heading: {
+    fontSize: 25,
+    textAlign: 'center',
+    marginVertical: 10,
+  },
+  textStyle: {
+    textAlign: 'center',
+    fontSize: 20,
+    marginVertical: 10,
+  },
+  placed:{
+    fontSize:20,
+  }
+});

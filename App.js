@@ -22,8 +22,8 @@ import Loginpage from "./Screens/Loginpage";
 import Signup from "./Screens/Signup";
 import Searchpage from './Screens/Searchpage';
 import CartPage from './Screens/CartPage';
-import OrderConfirmation from './Screens/OrderConfirmation'
-
+import OrderConfirmation from './Screens/OrderConfirmation';
+import ProfileScreen from './Screens/ProfileScreen';
 const Stack = createStackNavigator();
 
 function Home() {
@@ -92,7 +92,7 @@ function Cart() {
 function Profile() {
   return (
     <Stack.Navigator
-        initialRouteName="Profile"
+        initialRouteName="Login"
         screenOptions={{
           headerStyle: { backgroundColor: '#3944BC' },
           headerTintColor: '#fff',
@@ -106,6 +106,10 @@ function Profile() {
           name="Signup"
           component={Signup}
           options={{ title: 'Signup' }}/>
+          <Stack.Screen
+          name="Profile"
+          component={ProfileScreen}
+          options={{ title: 'Profile' }}/>
       </Stack.Navigator>
   );
 }
