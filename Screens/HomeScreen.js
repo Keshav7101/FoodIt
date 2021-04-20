@@ -84,7 +84,7 @@ const HomeScreen = ({ navigation }) => {
           </View>
           <View style={styles.cardInfo}>
             <Text style={styles.cardTitle}>Suraj Dhaba</Text>
-            <StarRating ratings={4} reviews={99} />
+            <StarRating ratings={4} reviews={91} />
             <Text style={styles.cardDetails}>
               Near GLA University main gate Barthiha, Mathura
             </Text>
@@ -109,7 +109,7 @@ const HomeScreen = ({ navigation }) => {
           </View>
           <View style={styles.cardInfo}>
             <Text style={styles.cardTitle}>Spicy Restaurant</Text>
-            <StarRating ratings={4} reviews={99} />
+            <StarRating ratings={4} reviews={85} />
             <Text style={styles.cardDetails}>
               Near GLA University Polytechnic gate Barthiha, Mathura
             </Text>
@@ -117,6 +117,32 @@ const HomeScreen = ({ navigation }) => {
         </View>
         </View>
           </TouchableOpacity>
+          <View>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={
+              () => navigation.navigate('Punjabi')
+            }>
+              <View style={styles.cardsWrapper}>
+          <View style={styles.card}>
+          <View style={styles.cardImgWrapper}>
+            <Image
+              source={require('../assets/images/punjabi.jpg')}
+              resizeMode="cover"
+              style={styles.cardImg}
+            />
+          </View>
+          <View style={styles.cardInfo}>
+            <Text style={styles.cardTitle}>Punjabi Tadka</Text>
+            <StarRating ratings={3} reviews={74} />
+            <Text style={styles.cardDetails}>
+              Near GLA University main gate Barthiha, Mathura
+            </Text>
+          </View>
+        </View>
+        </View>
+          </TouchableOpacity>
+        </View>
         </View>
       </View>
       </ScrollView>
@@ -132,7 +158,7 @@ const styles = StyleSheet.create({
     height:170,
     marginTop: 16,
     marginBottom:5,
-    borderRadius:20
+    borderRadius:20,
   },
   sliderContainer: {
     height: 200,

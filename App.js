@@ -24,6 +24,7 @@ import CartPage from './Screens/CartPage';
 import OrderConfirmation from './Screens/OrderConfirmation';
 import ProfileScreen from './Screens/ProfileScreen';
 import EditProfileScreen from './Screens/EditProfileScreen';
+import PunjabiTadka from './Screens/PunjabiTadka';
 
 const Stack = createStackNavigator();
 
@@ -48,6 +49,10 @@ function Home() {
           name="Spicy"
           component={Spicy}
           options={{ title: 'Spicy Restaurant' }} />
+          <Stack.Screen
+          name="Punjabi"
+          component={PunjabiTadka}
+          options={{ title: 'Punjabi Tadka' }} />
       </Stack.Navigator>
   );
 }

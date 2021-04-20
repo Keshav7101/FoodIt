@@ -18,7 +18,7 @@ const SecondPage = ({navigation,route}) => {
         onPress={() => navigation.navigate('Edit')}
         />
         </View>
-        <Text style={{ margin: 10 }}>Hello {route.params?.post}</Text>
+        <Text style={{ margin: 10 }}>Hello </Text>
         </View>
         <LottieView
             key='animation'
