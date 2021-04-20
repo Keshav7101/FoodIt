@@ -1,91 +1,205 @@
-import React, {Component} from "react";
-import {Text, View, ScrollView, SafeAreaView} from "react-native";
-import InputSpinner from "react-native-input-spinner";
-import Styles from "../Styles/SpicyStyles";
+import React, {useState} from 'react';
+import {
+  SafeAreaView,
+  StyleSheet,
+  View,
+  Text,
+  TextInput,
+  Button,
+  FlatList,Image
+} from 'react-native';
 
-export default class App extends Component {
-	constructor(props) {
-		super(props);
-		let data = [];
-		for (var i = 0; i < 10; i++) {
-			data.push({
-				key: String(i),
-				value: Math.floor(Math.random() * 100) + 1,
-			});
-		}
-		this.state = {
-			value: 1,
-			valueReal: 1.5,
-			colorLeft: this.getRandomColor(),
-			colorRight: this.getRandomColor(),
-			data: data,
-		};
-	}
+const DATA = [
+	{
+	  id: '1',
+	  title: 'Veg Roll',
+	},
+	{
+	  id: '2',
+	  title: 'Egg Roll',
+	},
+	{
+	  id: '3',
+	  title: 'Paneer Roll',
+	},
+	{
+		id: '4',
+		title: 'Veg Roll',
+	  },
+	  {
+		id: '5',
+		title: 'Chicken Roll',
+	  },
+	  {
+		id: '6',
+		title: 'Chowmein Roll',
+	  },
+	  {
+		id: '7',
+		title: 'Alu parantha',
+	  },
+	  {
+		id: '8',
+		title: 'Paneer Parantha',
+	  },
+	  {
+		id: '9',
+		title: 'Gobhi Parantha',
+	  },
+	  {
+		id: '10',
+		title: 'Fried Rice',
+	  },
+	  {
+		id: '11',
+		title: 'Egg curry',
+	  },
+	  {
+		id: '12',
+		title: 'Sada Parantha',
+	  },
+  ];
+  import Swiper from 'react-native-swiper';
 
-	getRandomColor() {
-		var letters = "0123456789ABCDEF";
-		var color = "#";
-		for (var i = 0; i < 6; i++) {
-			color += letters[Math.floor(Math.random() * 16)];
-		}
-		return color;
-	}
+const FirstPage = ({navigation}) => {
+  const [foodName, setFoodName] = useState('');
+  const Item = ({ title }) => (
+	<View style={styles.item}>
+	  <Text style={styles.title}>{title}</Text>
+	</View>
+  );
+  const renderItem = ({ item }) => (
+    <Item title={item.title} />
+  );
 
-	render() {
-		return (
-			<SafeAreaView style={Styles.mainContainer}>
-				<ScrollView style={Styles.container}>
-				<View style={Styles.col}>
-						<Text style={Styles.text}>Egg Roll</Text>
-						<InputSpinner style={Styles.spinner} color={"#C4C4C4"}
-							colorPress={"#F00"}
-							buttonTextColor={"#000"}
-							buttonPressTextColor={"#FFF"} placeholder={"Add"} />
-					</View>
-					<View style={Styles.col}>
-						<Text style={Styles.text}>Veg Roll</Text>
-						<InputSpinner style={Styles.spinner} color={"#C4C4C4"}
-							colorPress={"#F00"}
-							buttonTextColor={"#000"}
-							buttonPressTextColor={"#FFF"} placeholder={"Add"} />
-					</View>
-					<View style={Styles.col}>
-						<Text style={Styles.text}>Paneer Roll</Text>
-						<InputSpinner style={Styles.spinner} color={"#C4C4C4"}
-							colorPress={"#F00"}
-							buttonTextColor={"#000"}
-							buttonPressTextColor={"#FFF"} placeholder={"Add"} />
-					</View>
-					<View style={Styles.col}>
-						<Text style={Styles.text}>Chicken Roll</Text>
-						<InputSpinner style={Styles.spinner} color={"#C4C4C4"}
-							colorPress={"#F00"}
-							buttonTextColor={"#000"}
-							buttonPressTextColor={"#FFF"} placeholder={"Add"} />
-					</View>
-					<View style={Styles.col}>
-						<Text style={Styles.text}>Alu Parantha</Text>
-						<InputSpinner style={Styles.spinner} color={"#C4C4C4"}
-							colorPress={"#F00"}
-							buttonTextColor={"#000"}
-							buttonPressTextColor={"#FFF"} placeholder={"Add"} />
-					</View>
-					<View style={Styles.col}>
-						<Text style={Styles.text}>Paneer Parantha</Text>
-						<InputSpinner style={Styles.spinner} color={"#C4C4C4"}
-							colorPress={"#F00"}
-							buttonTextColor={"#000"}
-							buttonPressTextColor={"#FFF"} placeholder={"Add"} />
-					</View>
-					<View style={Styles.col}>
-						<Text style={Styles.text}>Gobhi Parantha</Text>
-						<InputSpinner style={Styles.spinner} color={"#C4C4C4"}
-							colorPress={"#F00"}
-							buttonTextColor={"#000"}
-							buttonPressTextColor={"#FFF"} placeholder={"Add"} />
-					</View>
-				</ScrollView>
-			</SafeAreaView>
-		);
-	}
-}
+  return (
+    <SafeAreaView style={{flex: 1}}>
+      <View style={styles.sliderContainer}>
+        <Swiper
+          autoplay
+          horizontal={true}
+          height={150}
+          activeDotColor="#FF6347">
+          <View style={styles.slide}>
+            <Image
+              source={require('../assets/images/spicy1.jpg')}
+              resizeMode="cover"
+              style={styles.sliderImage}
+            />
+          </View>
+          <View style={styles.slide}>
+            <Image
+              source={require('../assets/images/spicy2.jpg')}
+              resizeMode="cover"
+              style={styles.sliderImage}
+            />
+          </View>
+          <View style={styles.slide}>
+            <Image
+              source={require('../assets/images/spicy3.jpg')}
+              resizeMode="cover"
+              style={styles.sliderImage}
+            />
+          </View>
+          <View style={styles.slide}>
+            <Image
+              source={require('../assets/images/spicy4.jpg')}
+              resizeMode="cover"
+              style={styles.sliderImage}
+            />
+          </View>
+        </Swiper>
+      </View>
+      <View style={styles.container}>
+        {/*Input to get the value from the user*/}
+        <Text style={styles.welcometext}>Welcome to Spicy Restaurant</Text>
+        <TextInput
+          value={foodName}
+          onChangeText={(foodName) => setFoodName(foodName)}
+          placeholder={'Food Item'}
+          style={styles.inputStyle}
+        />
+		<FlatList
+        data={DATA}
+        renderItem={renderItem}
+        keyExtractor={item => item.id}
+      	/>
+        {/* On click of the button we will send the data as a Json
+          From here to the Cart Screen using navigation */}
+        <Button
+          title="Go to Cart"
+          //Button Title
+          onPress={() =>
+            navigation.navigate('CartPage', {
+              paramKey: foodName,
+            })
+          }
+        />
+      </View>
+    </SafeAreaView>
+  );
+};
+
+export default FirstPage;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    padding: 20,
+  },
+  heading: {
+    fontSize: 25,
+    textAlign: 'center',
+    marginVertical: 10,
+  },
+  textStyle: {
+    textAlign: 'center',
+    fontSize: 16,
+    marginVertical: 10,
+  },
+  inputStyle: {
+    width: '80%',
+    height: 44,
+    padding: 10,
+    marginVertical: 10,
+    backgroundColor: '#DBDBD6',
+    borderRadius:20
+  },
+  item: {
+    backgroundColor: '#64A1FF',
+    padding: 20,
+    marginVertical: 8,
+    marginHorizontal: 16,
+	  borderRadius:20
+  },
+  title: {
+    fontSize: 30,
+  },
+  sliderContainer: {
+    height: 150,
+    width: '95%',
+    marginTop: 10,
+    justifyContent: 'center',
+    alignSelf: 'center',
+    borderRadius: 8,
+  },
+
+  wrapper: {},
+
+  slide: {
+    flex: 1,
+    justifyContent: 'center',
+    backgroundColor: 'transparent',
+    borderRadius: 8,
+  },
+  sliderImage: {
+    height: '100%',
+    width: '100%',
+    alignSelf: 'center',
+    borderRadius: 8,
+  },
+  welcometext:{
+    fontSize:20
+  }
+});

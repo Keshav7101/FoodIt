@@ -78,7 +78,7 @@ function Cart() {
           headerTitleStyle: { fontWeight: 'bold' }
         }}>
         <Stack.Screen
-          name="Cartpage"
+          name="CartPage"
           component={CartPage}
           options={{ title: 'Cart' }}/>
         <Stack.Screen

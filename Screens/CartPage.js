@@ -8,17 +8,19 @@ import {
   Button,
 } from 'react-native';
 
-const FirstPage = ({navigation}) => {
+const FirstPage = ({navigation,route}) => {
   const [placeName, setPlaceName] = useState('');
 
   return (
     <SafeAreaView style={{flex: 1}}>
       <View style={styles.container}>
-        {/*Input to get the value from the user*/}
+      <Text style={styles.textStyle}>
+          Your Order items {'\n'} {route.params.paramKey}
+        </Text>
         <TextInput
           value={placeName}
           onChangeText={(placeName) => setPlaceName(placeName)}
-          placeholder={'Order Pickup Place'}
+          placeholder={'Delivery Place'}
           style={styles.inputStyle}
         />
         {/* On click of the button we will send the data as a Json
@@ -52,7 +54,7 @@ const styles = StyleSheet.create({
   },
   textStyle: {
     textAlign: 'center',
-    fontSize: 16,
+    fontSize: 20,
     marginVertical: 10,
   },
   inputStyle: {
