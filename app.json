@@ -6,12 +6,15 @@
     "slug": "FoodIt",
     "version": "0.0.1",
     "splash": {
-      "image": "./assets/images/Splash.jpg",
+      "image": "./assets/images/Splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "android": {
+      "package": "com.GLA.FoodIt"
+    }
   }
 }

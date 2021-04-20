@@ -8,15 +8,15 @@ import {
   Button,
 } from 'react-native';
 
-const FirstPage = ({navigation,route}) => {
+const CartPage = ({navigation}) => {
   const [placeName, setPlaceName] = useState('');
 
   return (
     <SafeAreaView style={{flex: 1}}>
-      <View style={styles.container}>
       <Text style={styles.textStyle}>
-          Your Order items
+          Your Order Items Here
         </Text>
+      <View style={styles.container}>
         <TextInput
           value={placeName}
           onChangeText={(placeName) => setPlaceName(placeName)}
@@ -64,4 +64,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default FirstPage;
+export default CartPage;

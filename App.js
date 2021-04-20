@@ -13,7 +13,6 @@ import {
 import {
   createBottomTabNavigator
 } from '@react-navigation/bottom-tabs';
-import VectorIcons from 'react-native-vector-icons';
 
 import HomeScreen from './Screens/HomeScreen';
 import SurajDhaba from './Screens/SurajDhaba';
@@ -24,6 +23,8 @@ import Searchpage from './Screens/Searchpage';
 import CartPage from './Screens/CartPage';
 import OrderConfirmation from './Screens/OrderConfirmation';
 import ProfileScreen from './Screens/ProfileScreen';
+import EditProfileScreen from './Screens/EditProfileScreen';
+
 const Stack = createStackNavigator();
 
 function Home() {
@@ -106,10 +107,14 @@ function Profile() {
           name="Signup"
           component={Signup}
           options={{ title: 'Signup' }}/>
-          <Stack.Screen
+        <Stack.Screen
           name="Profile"
           component={ProfileScreen}
           options={{ title: 'Profile' }}/>
+        <Stack.Screen
+          name="Edit"
+          component={EditProfileScreen}
+          options={{ title: 'Edit Profile' }}/>
       </Stack.Navigator>
   );
 }

@@ -1,8 +1,9 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet, View, Text,Image} from 'react-native';
+import {SafeAreaView, StyleSheet, View, Text,Image,Button} from 'react-native';
 import LottieView from 'lottie-react-native';
 
-const SecondPage = ({route}) => {
+const SecondPage = ({navigation,route}) => {
+  
   return (
     <SafeAreaView style={{flex: 1}}>
       <View style={styles.container}>
@@ -13,7 +14,13 @@ const SecondPage = ({route}) => {
             source={require('../assets/Watermelon.json')}
             style={{height:350,marginLeft:0,marginTop:0}}
         />
-        <Text style={styles.placed}>Hello</Text>
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <Button
+        title="Edit Profile"
+        onPress={() => navigation.navigate('Edit')}
+        />
+        <Text style={{ margin: 10 }}>Hello {route.params?.post}</Text>
+        </View>
       </View>
     </SafeAreaView>
   );

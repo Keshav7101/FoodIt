@@ -63,6 +63,7 @@ const DATA = [
 
 const SurajPage = ({navigation}) => {
   const [foodName1, setFoodName1] = useState('');
+
   const Item = ({ title }) => (
 	<View style={styles.item}>
 	  <Text style={styles.title}>{title}</Text>
@@ -74,7 +75,8 @@ const SurajPage = ({navigation}) => {
 
   return (
     <SafeAreaView style={{flex: 1}}>
-		<View style={styles.sliderContainer}>
+      <View style={styles.container}>
+      <View style={styles.sliderContainer}>
         <Swiper
           autoplay
           horizontal={true}
@@ -110,7 +112,6 @@ const SurajPage = ({navigation}) => {
           </View>
         </Swiper>
       </View>
-      <View style={styles.container}>
         <TextInput
           value={foodName1}
           onChangeText={(foodName1) => setFoodName1(foodName1)}
@@ -128,7 +129,7 @@ const SurajPage = ({navigation}) => {
           title="Go to Cart"
           onPress={() =>
             navigation.navigate('Cart', {
-              paramKey: foodName1,
+              paramkey: foodName1,
             })
           }
         />
