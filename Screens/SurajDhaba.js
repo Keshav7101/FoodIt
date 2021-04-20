@@ -13,51 +13,51 @@ import Swiper from 'react-native-swiper';
 const DATA = [
 	{
 	  id: '1',
-	  title: 'Veg Roll',
+	  title: 'Veg Roll Rs.35',
 	},
 	{
 	  id: '2',
-	  title: 'Egg Roll',
+	  title: 'Egg Roll Rs.40',
 	},
 	{
 	  id: '3',
-	  title: 'Paneer Roll',
+	  title: 'Paneer Roll Rs.40',
 	},
 	{
 		id: '4',
-		title: 'Veg Roll',
+		title: 'Chicken Roll Rs.55',
 	  },
 	  {
 		id: '5',
-		title: 'Chicken Roll',
+		title: 'Chowmein Roll Rs.45',
 	  },
 	  {
 		id: '6',
-		title: 'Chowmein Roll',
+		title: 'Chilly Potato Rs.45',
 	  },
 	  {
 		id: '7',
-		title: 'Alu parantha',
+		title: 'Alu parantha Rs.35',
 	  },
 	  {
 		id: '8',
-		title: 'Paneer Parantha',
+		title: 'Paneer Parantha Rs.45',
 	  },
 	  {
 		id: '9',
-		title: 'Gobhi Parantha',
+		title: 'Gobhi Parantha Rs.50',
 	  },
 	  {
 		id: '10',
-		title: 'Fried Rice',
+		title: 'Fried Rice Rs.50',
 	  },
 	  {
 		id: '11',
-		title: 'Egg curry',
+		title: 'Egg curry Rs.60',
 	  },
 	  {
 		id: '12',
-		title: 'Sada Parantha',
+		title: 'Sada Parantha Rs.10',
 	  },
   ];
 
@@ -171,7 +171,7 @@ const styles = StyleSheet.create({
 	borderRadius:20
   },
   title: {
-    fontSize: 32,
+    fontSize: 20,
   },
   sliderContainer: {
     height: 150,

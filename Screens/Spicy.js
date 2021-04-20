@@ -12,51 +12,51 @@ import {
 const DATA = [
 	{
 	  id: '1',
-	  title: 'Veg Roll',
+	  title: 'Chowmein Rs.50',
 	},
 	{
 	  id: '2',
-	  title: 'Egg Roll',
+	  title: 'Egg Chowmein Rs.70',
 	},
 	{
 	  id: '3',
-	  title: 'Paneer Roll',
+	  title: 'Paneer Chowmein Rs.80',
 	},
 	{
 		id: '4',
-		title: 'Veg Roll',
+		title: 'Fried Rice Rs.75',
 	  },
 	  {
 		id: '5',
-		title: 'Chicken Roll',
+		title: 'Chicken Fried Rice Rs.120',
 	  },
 	  {
 		id: '6',
-		title: 'Chowmein Roll',
+		title: 'Chicken Chilli Rs.150',
 	  },
 	  {
 		id: '7',
-		title: 'Alu parantha',
+		title: 'Butter Chicken Rs.130',
 	  },
 	  {
 		id: '8',
-		title: 'Paneer Parantha',
+		title: 'Kadhai Chicken Rs.120',
 	  },
 	  {
 		id: '9',
-		title: 'Gobhi Parantha',
+		title: 'Chicken do pyaza Rs.135',
 	  },
 	  {
 		id: '10',
-		title: 'Fried Rice',
+		title: 'Butter Roti Rs.12',
 	  },
 	  {
 		id: '11',
-		title: 'Egg curry',
+		title: 'Naan Rs.10',
 	  },
 	  {
 		id: '12',
-		title: 'Sada Parantha',
+		title: 'Sada Parantha Rs.8',
 	  },
   ];
   import Swiper from 'react-native-swiper';
@@ -168,7 +168,7 @@ const styles = StyleSheet.create({
   },
   item: {
     backgroundColor: '#64A1FF',
-    padding: 20,
+    padding: 5,
     marginVertical: 8,
     marginHorizontal: 16,
 	  borderRadius:20

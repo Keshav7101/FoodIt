@@ -6,13 +6,6 @@ const SecondPage = ({navigation,route}) => {
   
   return (
     <SafeAreaView style={{flex: 1}}>
-      <LottieView
-            key='animation'
-            autoPlay
-            resizeMode='cover'
-            source={require('../assets/Watermelon.json')}
-            style={{height:350,marginLeft:0,marginTop:0}}
-        />
       <View style={styles.container}>
         <View style={{ flex: 0, alignItems: 'center', justifyContent: 'center' }}>
         <Image
@@ -27,6 +20,13 @@ const SecondPage = ({navigation,route}) => {
         </View>
         <Text style={{ margin: 10 }}>Hello {route.params?.post}</Text>
         </View>
+        <LottieView
+            key='animation'
+            autoPlay
+            resizeMode='cover'
+            source={require('../assets/Watermelon.json')}
+            style={{height:350,marginLeft:0,marginTop:0}}
+        />
       </View>
     </SafeAreaView>
   );

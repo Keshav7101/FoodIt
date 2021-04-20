@@ -2,7 +2,8 @@ import * as React from 'react';
 import { View, Text, SafeAreaView,Button,TextInput,TouchableOpacity,Image} from 'react-native';
 
 const EditScreen = (navigation, route) => {
-    const [postText, setPostText] = React.useState('');
+    const [Name, setName] = React.useState('');
+    const [Mobileno, setMobileno] = React.useState('');
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View style={{ flex: 1 , padding: 16,alignItems:'center'}}>
@@ -20,15 +21,15 @@ const EditScreen = (navigation, route) => {
         multiline
         placeholder="Name"
         style={{ height: 40, width:250, padding: 10, backgroundColor: 'white',marginBottom:15 }}
-        value={postText}
-        onChangeText={setPostText}
+        value={Name}
+        onChangeText={setName}
         />
           <TextInput
         multiline
         placeholder="Mobile Number"
         style={{ height: 40, width:250, padding: 10, backgroundColor: 'white' }}
-        value={postText}
-        onChangeText={setPostText}
+        value={Mobileno}
+        onChangeText={setMobileno}
           />
       <View>
       <TouchableOpacity
