@@ -111,7 +111,6 @@ const FirstPage = ({navigation}) => {
         </Swiper>
       </View>
       <View style={styles.container}>
-        {/*Input to get the value from the user*/}
         <TextInput
           value={foodName}
           onChangeText={(foodName) => setFoodName(foodName)}
@@ -127,7 +126,6 @@ const FirstPage = ({navigation}) => {
           From here to the Cart Screen using navigation */}
         <Button
           title="Go to Cart"
-          //Button Title
           onPress={() =>
             navigation.navigate('CartPage', {
               paramKey: foodName,
