@@ -127,7 +127,7 @@ const FirstPage = ({navigation}) => {
         <Button
           title="Go to Cart"
           onPress={() =>
-            navigation.navigate('CartPage', {
+            navigation.navigate('Cart', {
               paramKey: foodName,
             })
           }

@@ -15,7 +15,7 @@ const FirstPage = ({navigation,route}) => {
     <SafeAreaView style={{flex: 1}}>
       <View style={styles.container}>
       <Text style={styles.textStyle}>
-          Your Order items {'\n'} {route.params.paramKey}
+          Your Order items
         </Text>
         <TextInput
           value={placeName}

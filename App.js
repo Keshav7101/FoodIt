@@ -71,14 +71,14 @@ function Search() {
 function Cart() {
   return (
     <Stack.Navigator
-        initialRouteName="CartPage"
+        initialRouteName="Cart"
         screenOptions={{
           headerStyle: { backgroundColor: '#3944BC' },
           headerTintColor: '#fff',
           headerTitleStyle: { fontWeight: 'bold' }
         }}>
         <Stack.Screen
-          name="CartPage"
+          name="Cart"
           component={CartPage}
           options={{ title: 'Cart' }}/>
         <Stack.Screen
