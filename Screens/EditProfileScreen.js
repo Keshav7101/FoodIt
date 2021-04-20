@@ -1,11 +1,15 @@
 import * as React from 'react';
-import { View, Text, SafeAreaView,Button,TextInput,TouchableOpacity } from 'react-native';
+import { View, Text, SafeAreaView,Button,TextInput,TouchableOpacity,Image} from 'react-native';
 
 const EditScreen = (navigation, route) => {
     const [postText, setPostText] = React.useState('');
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <View style={{ flex: 1 , padding: 16}}>
+      <View style={{ flex: 1 , padding: 16,alignItems:'center'}}>
+      <Image
+          source={require('../assets/images/user2.png')}
+          style={{ marginTop:20, width: 120, height: 120, borderTopRightRadius:30,borderBottomLeftRadius:30}}
+        />
         <View
           style={{
             flex: 1,
@@ -15,17 +19,17 @@ const EditScreen = (navigation, route) => {
           <TextInput
         multiline
         placeholder="Name"
-        style={{ height: 40, padding: 10, backgroundColor: 'white' }}
+        style={{ height: 40, width:250, padding: 10, backgroundColor: 'white',marginBottom:15 }}
         value={postText}
         onChangeText={setPostText}
-      />
-      <TextInput
+        />
+          <TextInput
         multiline
         placeholder="Mobile Number"
-        style={{ height: 40, padding: 10, backgroundColor: 'white' }}
+        style={{ height: 40, width:250, padding: 10, backgroundColor: 'white' }}
         value={postText}
         onChangeText={setPostText}
-      />
+          />
       <View>
       <TouchableOpacity
             style={{alignItems: 'center',
@@ -34,12 +38,9 @@ const EditScreen = (navigation, route) => {
             padding: 10,
             width: 280,
             marginTop: 20,
-            marginLeft:30,
+            marginLeft:0,
             borderRadius:20,
-          }}
-            onPress={
-              () => navigation.navigate('Profile')
-            }>
+          }}>
             <Text>Done</Text>
           </TouchableOpacity>
           </View>

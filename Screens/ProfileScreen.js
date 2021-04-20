@@ -6,7 +6,6 @@ const SecondPage = ({navigation,route}) => {
   
   return (
     <SafeAreaView style={{flex: 1}}>
-      <View style={styles.container}>
       <LottieView
             key='animation'
             autoPlay
@@ -14,11 +13,18 @@ const SecondPage = ({navigation,route}) => {
             source={require('../assets/Watermelon.json')}
             style={{height:350,marginLeft:0,marginTop:0}}
         />
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <View style={styles.container}>
+        <View style={{ flex: 0, alignItems: 'center', justifyContent: 'center' }}>
+        <Image
+          source={require('../assets/images/user2.png')}
+          style={{ marginTop:0, width: 120, height: 120, borderTopRightRadius:30,borderBottomLeftRadius:30}}
+        />
+        <View style={{flex:0}}>
         <Button
         title="Edit Profile"
         onPress={() => navigation.navigate('Edit')}
         />
+        </View>
         <Text style={{ margin: 10 }}>Hello {route.params?.post}</Text>
         </View>
       </View>
@@ -44,7 +50,4 @@ const styles = StyleSheet.create({
     fontSize: 20,
     marginVertical: 10,
   },
-  placed:{
-    fontSize:20,
-  }
 });
