@@ -4,6 +4,9 @@
 We want to create a food ordering mobile application for the people, with some awesome features. 
 We are making it by the use of react native.
 
+You can Download our demo app from here-
+https://drive.google.com/file/d/1Ul6KFtbVyI-pcpjBMS3wXgCzNX3JRgGB/view?usp=sharing
+
 # ScreenShots
 ![Screenshot_2021-04-20-17-34-47-50](https://user-images.githubusercontent.com/49478839/115395847-f7250e80-a201-11eb-9cea-f74cdbcfd156.jpg)
 ![Screenshot_2021-04-20-17-35-39-58_191cade76ea2a998dbda06dc3f825d26](https://user-images.githubusercontent.com/49478839/115395866-fd1aef80-a201-11eb-8e81-67de9a2bbedb.jpg)
